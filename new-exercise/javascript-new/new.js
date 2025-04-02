@@ -19,18 +19,29 @@
 //creo le mie variabili
 let start = 1;
 console.log(start);
-const finish = 100;
-console.log(start);
+const finish = 24;
+console.log(finish);
 
 //creo le mie variabili bolleane
 
-const multiple4 = start % 4 === 0;
-console.log(multiple4);
-const multiple6 = start % 6 === 0;
-console.log(multiple6);
+//creo i testi
+
+const text1 = "Hey";
+const text2 = "Man";
 
 //creo il processo di conta tramite il for
 
 for (start = start; start <= finish; start++) {
-  console.log(start);
+  const multiple4 = start % 4 === 0;
+  const multiple6 = start % 6 === 0;
+  let outputtext = start;
+
+  if (multiple4 && multiple6) {
+    outputtext = start + text1 + text2;
+  } else if (multiple6) {
+    outputtext = start + text2;
+  } else if (multiple4) {
+    outputtext = start + text1;
+  }
+  console.log(outputtext);
 }
