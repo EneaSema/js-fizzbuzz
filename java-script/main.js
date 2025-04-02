@@ -26,9 +26,6 @@ console.log(finish);
 
 //creo i 2 parametri richiesti 3 e 5
 
-const requestFirst = start % 3 === 0;
-const requestSecond = start % 5 === 0;
-
 //creo le variabili con testo
 
 const textFizz = "Fizz";
@@ -42,13 +39,22 @@ const textFizzBuzz = "FizzBuzz";
 // controllo se il numero ottenuto è un multiplo di 5, usa formula 1 / 5 se resto 0, stampare FizzBuzz
 
 for (start = 1; start <= finish; start++) {
-  if (start === requestFirst && start !== requestSecond) {
-    console.log(start + textFizz);
-  } else if (start !== requestFirst && start === requestSecond) {
-    console.log(start + textBuzz);
-  } else if (start === requestFirst && start === requestSecond) {
-    console.log(start + textFizzBuzz);
+  const requestFirst = start % 3 === 0;
+  const requestSecond = start % 5 === 0;
+  let outputtext = start;
+
+  if (start % 3 === 0 && start % 5 === 0) {
+    // console.log(start + textFizzBuzz);
+    outputtext = textFizzBuzz;
+  } else if (start % 5 === 0) {
+    // console.log(start + textBuzz);
+    outputtext = textBuzz;
+  } else if (start % 3 === 0) {
+    // console.log(start + textFizz);
+    outputtext = textFizz;
   }
+
+  console.log(outputtext);
 }
 
 // OUTPUT

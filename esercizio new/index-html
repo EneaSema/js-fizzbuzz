@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Procjet FizzBuzz</title>
+    <title>New Procjet FizzBuzz</title>
   </head>
   <body>
-    <script src="./java-script/main.js"></script>
+    <script src="../esercizio new/javascript/main.js"></script>
   </body>
 </html>
