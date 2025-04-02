@@ -18,25 +18,38 @@
 
 //creo variabile iniziale e quella finale senza usare const
 
-let start = 1;
+let start;
 console.log(start);
 
 let finish = 100;
 console.log(finish);
 
-//creo i 2 parametri richiesti
+//creo i 2 parametri richiesti 3 e 5
 
-const requestFirst=3;
-const requestSecond=5;
+const requestFirst = start % 3 === 0;
+const requestSecond = start % 5 === 0;
 
+//creo le variabili con testo
 
+const textFizz = "Fizz";
+const textBuzz = "Buzz";
+const textFizzBuzz = "FizzBuzz";
 
 // SVILUPPO
 
-for (start = 1; start <= finish; start++;) {
-  console.log(start);
-};
+// inizio a contare da 1 fino a 100;
+// controllo se il numero ottenuto è un multiplo di 3, usa formula 1 / 3 se resto 0, stampare Fizz e
+// controllo se il numero ottenuto è un multiplo di 5, usa formula 1 / 5 se resto 0, stampare FizzBuzz
 
+for (start = 1; start <= finish; start++) {
+  if (start === requestFirst && start !== requestSecond) {
+    console.log(start + textFizz);
+  } else if (start !== requestFirst && start === requestSecond) {
+    console.log(start + textBuzz);
+  } else if (start === requestFirst && start === requestSecond) {
+    console.log(start + textFizzBuzz);
+  }
+}
 
 // OUTPUT
 
